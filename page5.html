@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style type="text/css">
+
+        h1 { 
+            font-size: 22pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color: #003057;
+            text-align: center;
+            }
+
+        h2 { 
+            font-size: 18pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color:#003057;
+            text-align: center;
+            }
+
+        h3 { 
+            font-size: 18pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color: #003057;
+            text-align: center;
+            }
+
+        h4 { 
+            font-size: 10pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color:#ffffff;
+            text-align: center;
+            }
+
+        p {
+            font-size: 12pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color: #003057;
+            width: 95%;
+            text-align: justify;
+            margin: auto;
+            }    
+                       
+        ul { 
+            font-size: 12pt; 
+            font-family: Verdana, Arial, Helvetica, sans-serif; 
+            color: #003057;
+            width: max-content;
+            margin: auto;
+            }
+
+        li {
+            width: 630px;
+            text-align: justify;
+            }
+
+        a {
+            color: #003057;
+            text-decoration: none;
+            }
+
+        a:hover {
+            
+            }
+
+        header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            background:#ffffff;
+            }    
+
+        footer {
+            position: fixed;
+            left: 0; bottom: 0;
+            width: 100%;
+            background:#003057;
+            }    
+
+        section {            
+            margin-top: 110px;
+            padding-bottom: 100px;
+            padding-bottom: 100px;
+            } 
+
+        div {
+            width: max-content;
+            margin: auto;
+            }      
+
+    </style>
+
+    <title>TCP/IP Book</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <hr style = border:none;background-color:#003057;color:#003057;height:2px;>
+            <h1> АДРЕСАЦИЯ В ПРОТОКОЛЕ TCP/IP </h1>
+        <hr style = border:none;background-color:#003057;color:#003057;height:2px;>
+        
+        <br>
+    
+    </header>        
+
+    <section>
+
+        <h2 id="art5">5. Сетевые и широковещательные адреса </h2>
+
+            <p>
+                Мы уже отметили основное преимущество кодирования информации о сети в межсетевых адресах: оно делает возможной эффективную маршрутизацию.
+                Другим преимуществом является то, что межсетевые адреса могут указывать как сети, так и отдельные ГВМ. По соглашению идГВМ, равный 0, никогда не назначается отдельной ГВМ.
+                Вместо этого IP-адрес с нулевым идГВМ используется для ссылки на саму сеть.
+            </p>
+
+        <h3>Подведем итоги:</h3>
+
+            <ul>
+
+                <li>
+                    Межсетевые адреса могут использоваться для указания как на сети, так и на отдельные ГВМ.
+                </li>
+
+                <br>
+
+                <li>
+                    По соглашению адрес сети имеет поле идГВМ, равное 0.
+                </li>
+
+                <br>
+
+            </ul>
+
+            <br>
+
+            <p>
+                Другим важным преимуществом межсетевой схемы адресации является то, что она включает широковещательный адрес, который используется для ссылки на все ГВМ в данной сети. Согласно стандарту, любой идГВМ, состоящий из всех единиц, зарезервирован для широковещания (К сожалению, в ранней версии кода TCP/IP, входившего в состав BSD UNIX, все нули некорректно использовались для широковещания, и хотя впоследствии код BSD был исправлен, ошибка осталась в некоторых коммерческих системах, созданных на основе этого кода).
+                Во многих сетевых технологиях(например, Ethernetе) широковещание может быть таким же эффективным, как обычная передача; в других (например, Cypress) широковещание поддерживается сетевым программным обеспечением, но требует значительно больше времени, чем простая передача. Некоторые сети не поддерживают широковещание вообще.
+                Поэтому, широковещательный IP-адрес не гарантирует наличия или эффективности широковещательной доставки пакетов.
+            </p>
+
+        <h3>Подводя итоги, можно сказать, что:</h3>
+
+            <ul>
+
+                <li>
+                    IP-адреса могут использоваться для указания широковещания и отображения его в аппаратное широковещание, если это возможно.
+                </li>
+
+                <br>
+
+                <li>
+                    По соглашению, широковещательный адрес имеет поле идГВМ со всеми битами, равными 1.
+                </li>
+
+                <br>
+
+            </ul>
+
+            <div>
+
+                <br>
+                <hr style = border:none;background-color:#003057;color:#003057;height:2px;>
+                <a href="page4.html"><img src="./img/_back.svg" width="30"></a>
+                <a href="index.html"><img src="./img/_home.svg" width="30"></a>
+                <a href="page6.html"><img src="./img/_forward.svg" width="30"></a>
+                <br>
+
+            </div>>
+
+    </section>
+
+    <footer>
+
+        <hr style = border:none;background-color:#ffffff;color:#ffffff;height:2px;>
+            <h4> УРОК #3 </h4>
+        <hr style = border:none;background-color:#ffffff;color:#ffffff;height:2px;>
+
+    </footer>  
+
+</body>
+
+</html>
